@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1 class="mt-5">Edit Data</h1>
-            <form action="/update/<?= $mahasiswa['id']; ?>" method="POST" enctype="multipart/form-data">
+            <form action="/mhs/update/<?= $mahasiswa['id']; ?>" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <input type="hidden" value="<?= $mahasiswa['nim']; ?>" id="nimOld" name="nimOld">
                 <input type="hidden" value="<?= $mahasiswa['foto']; ?>" id="fotoOld" name="fotoOld">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
-                <a href="/" class="btn btn-warning">Cancel</a>
+                <a href="/mhs" class="btn btn-warning">Cancel</a>
             </form>
         </div>
     </div>

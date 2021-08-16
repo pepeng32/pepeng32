@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1 class="mt-5">Tambah Data</h1>
-            <form action="/save" method="POST" enctype="multipart/form-data">
+            <form action="/mhs/save" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="row mb-3">
                     <label for="nim" class="col-sm-2 col-form-label">Nim</label>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Add</button>
-                <a href="/mahasiswa" class="btn btn-warning">Cancel</a>
+                <a href="/mhs" class="btn btn-warning">Cancel</a>
             </form>
         </div>
     </div>

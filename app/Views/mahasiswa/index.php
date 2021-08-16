@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col">
             <h1 class="mt-5 text-center">Daftar Mahasiswa</h1>
-            <a class="btn btn-primary mb-3" href="/create">Create</a>
-            <form action="" method="POST">
+            <a class="btn btn-primary mb-3" href="/mhs/create">Create</a>
+            <form action="/mhs" method="GET">
                 <div class="input-group mb-3">
-                    <input type="text" value="<?= session()->getFlashdata('keyword') ?>" class="form-control" name="keyword" placeholder="What to search" aria-label="What to search" autofocus>
+                    <input type="text" value="<?= isset($_GET['keyword']) ? $_GET['keyword'] : '' ?>" class="form-control" name="keyword" placeholder="What to search" aria-label="What to search" autofocus>
                     <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
@@ -41,7 +41,7 @@
                             <td width="30%"><?= $m['nama'] ?></td>
                             <td width="40%"><?= $m['alamat'] ?></td>
                             <td width="5%"><img class="foto" src="/foto/<?= $m['foto'] ?>" alt=""></td>
-                            <td width="10%"><a class="btn btn-primary" href="/detail/<?= $m['nim'] ?>">Detail</a></td>
+                            <td width="10%"><a class="btn btn-primary" href="/mhs/detail/<?= $m['nim'] ?>">Detail</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

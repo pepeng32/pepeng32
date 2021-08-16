@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <!-- navbar -->
+    <?= $this->include('layout/navbar') ?>
+
     <!-- content -->
     <?= $this->renderSection('content'); ?>
 

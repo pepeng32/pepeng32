@@ -15,13 +15,13 @@
                             <p class="card-text">Nim : <?= $mahasiswa['nim']; ?></p>
                             <p class="card-text">Nama : <?= $mahasiswa['nama']; ?></p>
                             <p class="card-text">Alamat : <?= $mahasiswa['alamat']; ?></p>
-                            <a href="/edit/<?= $mahasiswa['nim']; ?>" class="btn btn-success">Edit</a>
-                            <form action="/<?= $mahasiswa['id']; ?>" method="POST" class="d-inline">
+                            <a href="/mhs/edit/<?= $mahasiswa['nim']; ?>" class="btn btn-success">Edit</a>
+                            <form action="/mhs/<?= $mahasiswa['id']; ?>" method="POST" class="d-inline">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin ?')">Delete</button>
                             </form>
-                            <p class="card-text"><a href="/mahasiswa"><small class="text-muted">Back to list</small></a></p>
+                            <p class="card-text"><a href="/mhs"><small class="text-muted">Back to list</small></a></p>
                         </div>
                     </div>
                 </div>

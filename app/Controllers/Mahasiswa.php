@@ -7,7 +7,7 @@ class Mahasiswa extends BaseController
 
 	public function index()
 	{
-		//pagination numbering
+		// //pagination numbering
 		$currentPage = $this->request->getVar('page');
 		$startNumber = 1;
 		if ($currentPage) {
@@ -20,10 +20,8 @@ class Mahasiswa extends BaseController
 		$keyword = $this->request->getVar('keyword');
 		if ($keyword) {
 			$mahasiswa = $this->mahasiswaModel->like('nama', $keyword)->orLike('alamat', $keyword);
-			$this->session->setFlashdata('keyword', $keyword);
 		} else {
 			$mahasiswa = $this->mahasiswaModel;
-			$this->session->remove('keyword', $keyword);
 		}
 
 		$data = [

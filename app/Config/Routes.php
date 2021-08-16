@@ -35,21 +35,19 @@ $routes->setAutoRoute(true);
 //root
 $routes->get('/', 'Mahasiswa::index');
 
-//protection 
-$routes->get('/mahasiswa/(:any)', 'Mahasiswa::index');
-
 //delete method
-$routes->delete('/(:any)', 'Mahasiswa::delete/$1');
+$routes->delete('/mhs/(:any)', 'Mahasiswa::delete/$1');
 
 //get link
-$routes->get('/create', 'Mahasiswa::create');
-$routes->get('/edit/(:any)', 'Mahasiswa::edit/$1');
-$routes->get('/detail/(:any)', 'Mahasiswa::detail/$1');
+$routes->get('/mhs', 'Mahasiswa::index');
+$routes->get('/mhs/create', 'Mahasiswa::create');
+$routes->get('/mhs/edit/(:any)', 'Mahasiswa::edit/$1');
+$routes->get('/mhs/detail/(:any)', 'Mahasiswa::detail/$1');
 
 //post link
-$routes->post('/', 'Mahasiswa::index');
-$routes->post('/save', 'Mahasiswa::save');
-$routes->post('/update/(:any)', 'Mahasiswa::update/$1');
+$routes->post('/mhs', 'Mahasiswa::index');
+$routes->post('/mhs/save', 'Mahasiswa::save');
+$routes->post('/mhs/update/(:any)', 'Mahasiswa::update/$1');
 
 /*
  * --------------------------------------------------------------------
