@@ -32,22 +32,42 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-//root
-$routes->get('/', 'Mahasiswa::index');
+//root with login
+// $routes->get('/', 'Mahasiswa::index', ['filter' => 'login']);
 
-//delete method
-$routes->delete('/mhs/(:any)', 'Mahasiswa::delete/$1');
+// //delete method
+// $routes->delete('/mhs/(:any)', 'Mahasiswa::delete/$1');
 
-//get link
-$routes->get('/mhs', 'Mahasiswa::index');
-$routes->get('/mhs/create', 'Mahasiswa::create');
-$routes->get('/mhs/edit/(:any)', 'Mahasiswa::edit/$1');
-$routes->get('/mhs/detail/(:any)', 'Mahasiswa::detail/$1');
+// //get link
+// $routes->get('/mhs', 'Mahasiswa::index');
+// $routes->get('/mhs/create', 'Mahasiswa::create');
+// $routes->get('/mhs/edit/(:any)', 'Mahasiswa::edit/$1');
+// $routes->get('/mhs/detail/(:any)', 'Mahasiswa::detail/$1');
 
-//post link
-$routes->post('/mhs', 'Mahasiswa::index');
-$routes->post('/mhs/save', 'Mahasiswa::save');
-$routes->post('/mhs/update/(:any)', 'Mahasiswa::update/$1');
+// //post link
+// $routes->post('/mhs', 'Mahasiswa::index');
+// $routes->post('/mhs/save', 'Mahasiswa::save');
+// $routes->post('/mhs/update/(:any)', 'Mahasiswa::update/$1');
+
+//route group with login
+$routes->group('', ['filter' => 'login'], function ($routes) {
+	//root
+	$routes->get('/', 'Mahasiswa::index', ['filter' => 'login']);
+
+	//delete method
+	$routes->delete('/mhs/(:any)', 'Mahasiswa::delete/$1');
+
+	//get link
+	$routes->get('/mhs', 'Mahasiswa::index');
+	$routes->get('/mhs/create', 'Mahasiswa::create');
+	$routes->get('/mhs/edit/(:any)', 'Mahasiswa::edit/$1');
+	$routes->get('/mhs/detail/(:any)', 'Mahasiswa::detail/$1');
+
+	//post link
+	$routes->post('/mhs', 'Mahasiswa::index');
+	$routes->post('/mhs/save', 'Mahasiswa::save');
+	$routes->post('/mhs/update/(:any)', 'Mahasiswa::update/$1');
+});
 
 /*
  * --------------------------------------------------------------------
