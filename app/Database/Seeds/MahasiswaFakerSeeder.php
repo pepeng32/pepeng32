@@ -11,7 +11,7 @@ class MahasiswaFakerSeeder extends Seeder
 		$faker = \Faker\Factory::create('id_ID');
 
 		$model = model('MahasiswaModelFaker');
-		for ($x = 0; $x <= 300; $x++) {
+		for ($x = 0; $x <= 500; $x++) {
 			$model->insert([
 				'nim'       => mt_rand(10000000, 99999999),
 				'nama'      => $faker->name,

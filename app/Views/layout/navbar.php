@@ -6,9 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="/mhs">Tabel</a>
             </div>
             <a class="nav-link" href="/logout">Logout</a>
         </div>
