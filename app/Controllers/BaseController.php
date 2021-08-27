@@ -11,6 +11,7 @@ use Psr\Log\LoggerInterface;
 
 //models
 use App\Models\MahasiswaModel;
+use App\Models\DatatablesModel;
 
 /**
  * Class BaseController
@@ -63,5 +64,6 @@ class BaseController extends Controller
 
 		//models
 		$this->mahasiswaModel = new MahasiswaModel();
+		$this->datatablesModel = new DatatablesModel();
 	}
 }

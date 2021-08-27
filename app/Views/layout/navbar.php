@@ -7,6 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link" href="/mhs">Tabel</a>
+                <a class="nav-link" href="/dtt">Datatables</a>
             </div>
             <a class="nav-link" href="/logout">Logout</a>
         </div>
