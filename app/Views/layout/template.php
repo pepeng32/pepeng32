@@ -23,18 +23,6 @@
 
     <!-- script js -->
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function showPreview() {
-            const foto = document.querySelector('#formFileFoto');
-            const previewFoto = document.querySelector('#previewFoto');
-            const fileFoto = new FileReader();
-
-            fileFoto.readAsDataURL(foto.files[0]);
-            fileFoto.onload = function(e) {
-                previewFoto.src = e.target.result;
-            }
-        }
-    </script>
 
     <?= $this->renderSection('additionalJs'); ?>
 </body>

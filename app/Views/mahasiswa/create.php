@@ -1,5 +1,20 @@
 <?= $this->extend('layout/template'); ?>
 
+<?= $this->section('additionalJs'); ?>
+<script>
+    function showPreview() {
+        const foto = document.querySelector('#formFileFoto');
+        const previewFoto = document.querySelector('#previewFoto');
+        const fileFoto = new FileReader();
+
+        fileFoto.readAsDataURL(foto.files[0]);
+        fileFoto.onload = function(e) {
+            previewFoto.src = e.target.result;
+        }
+    }
+</script>
+<?= $this->endSection(); ?>
+
 <?= $this->section('content'); ?>
 <div class="container">
     <div class="row">
